@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html{
+	height: 100%;
+}
+
+body{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.2rem;
+	min-height: 100%; 
+	 
+}
+
+.grid_container{
+	display: grid;
+	gap: 5px;
+	grid-template: 
+	"header" 100px
+	"navbar" 50px
+	"main"	auto
+	"footer" 30px
+	;
+}
+
+.header{
+	grid-area: header;
+	background-color: #c449f5;
+}
+
+
+.navbar{
+	grid-area: navbar;
+	background-color: #e5ea48;
+}
+
+.main{
+	grid-area: main;
+	background-color: #e336be;
+}
+
+.footer{
+	grid-area: footer;
+	background-color: #093b5e;
+}
+
+@media (min-width: 600px) {
+
+	.grid_container{
+
+		grid-template: 
+		"header 	header" 	100px 
+		"navbar 	navbar" 	50px
+		"main" 		auto
+		"footer 	footer" 	100px /
+		 200px 		auto;
+ 	}
+
+}
+
+
+@media (min-width: 900px) {
+	.grid_container{
+		grid-template: 
+		"header 	header 	header" 	100px 
+		"navbar 	main" 	auto
+		"footer 	footer 	footer" 	100px /
+		 400px 		auto 	200px;
+	}
+}
